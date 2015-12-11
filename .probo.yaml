@@ -1,0 +1,9 @@
+assets:
+  - d7.sql.gz
+steps:
+  - name: Probo site setup
+    plugin: Drupal
+    database: d7.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    subDirectory: www
