@@ -1,0 +1,20 @@
+default:
+  paths:
+    features: 'features'
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://d7.dev
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '/var/www/d7'
+      drush:
+        alias: 'd7'
+        # If you use aliases, then change it to what you like.
+      text:
+        username_field: "name"
+        password_field: "pass"
+        log_out: "Logout"
