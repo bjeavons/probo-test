@@ -8,5 +8,5 @@ steps:
     databaseUpdates: true
     subDirectory: www
   - name: Run behat tests
-      plugin: Shell
-      command: 'cd www/sites/all/tests ; bin/behat'
+    plugin: Shell
+    command: 'cd www/sites/all/tests ; bin/behat'
