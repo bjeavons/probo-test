@@ -9,4 +9,4 @@ steps:
     subDirectory: www
   - name: Run behat tests
     plugin: Shell
-    command: 'cd www/sites/all/tests ; bin/behat'
+    command: 'cd www/sites/all/tests; ./bin/behat'
