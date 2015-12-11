@@ -7,3 +7,6 @@ steps:
     databaseGzipped: true
     databaseUpdates: true
     subDirectory: www
+  - name: Run behat tests
+      plugin: Shell
+      command: 'cd www/sites/all/tests ; bin/behat'
