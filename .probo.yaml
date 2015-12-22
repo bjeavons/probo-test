@@ -13,3 +13,6 @@ steps:
   - name: Run behat tests
     plugin: Shell
     command: 'cd $SRC_DIR/www/sites/all/tests ; ./bin/behat'
+  - name: Run card build
+    plugin: Shell
+    command: './scripts/build-compass'
