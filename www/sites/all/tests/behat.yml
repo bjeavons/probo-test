@@ -10,7 +10,8 @@ default:
       blackbox: ~
       api_driver: 'drupal'
       drupal:
-        drupal_root: '/var/www/html'
+        #drupal_root: '/var/www/html'
+        drupal_root: '/var/www/d7'
       drush:
         alias: 'd7'
         # If you use aliases, then change it to what you like.
