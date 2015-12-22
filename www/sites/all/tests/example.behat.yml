@@ -1,0 +1,28 @@
+# The three items marked with comments below will work in the "@card 1" 
+# environment of dev-docker. If you are using this outside of dev-docker or 
+# with a @card 2 or other site, you might need to tweak those 3 items.
+default:
+  paths:
+    features: 'features'
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      selenium2: ~
+      # You might need to change this:
+      base_url: http://dev.card.docker
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+      api_driver: drupal
+      drupal:
+        # You might need to change this:
+        drupal_root: '/var/www/card.com/'
+      drush:
+        # You might need to change this.
+        alias: card
+      text:
+        username_field: "name"
+        password_field: "pass"
+        log_out: "Logout"
+      region_map:
+        footer: "#sub-footer"
+

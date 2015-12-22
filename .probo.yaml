@@ -7,3 +7,9 @@ steps:
     databaseGzipped: true
     databaseUpdates: true
     subDirectory: www
+  - name: pwd
+    plugin: Shell
+    command: 'pwd'
+  - name: Run behat tests
+    plugin: Shell
+    command: 'cd $SRC_DIR/www/sites/all/tests ; ./bin/behat'

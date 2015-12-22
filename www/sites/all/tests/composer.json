@@ -1,0 +1,10 @@
+{
+  "require": {
+    "drupal/drupal-extension": "1.0.x-dev",
+    "guzzle/plugin-cookie": "3.9.2",
+    "peekmo/jsonpath": "2.0-ALPHA"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
