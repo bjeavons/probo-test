@@ -1,7 +1,7 @@
 assets:
   - d7.sql.gz
 steps:
-  - name: Probo site setup1
+  - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
     databaseGzipped: true
