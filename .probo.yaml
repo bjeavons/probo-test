@@ -1,7 +1,7 @@
 assets:
   - d7.sql.gz
 steps:
-  - name: Probo site setup!!
+  - name: Probo site setup1
     plugin: Drupal
     database: d7.sql.gz
     databaseGzipped: true
@@ -12,4 +12,4 @@ steps:
     command: 'pwd'
   - name: Run behat tests
     plugin: Shell
-    command: 'cd $SRC_DIR/www/sites/all/tests ; ./bin/behat'
+    command: 'cd $SRC_DIR/www/sites/all/tests ; ./bin/behat '

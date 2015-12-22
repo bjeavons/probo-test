@@ -6,3 +6,4 @@ Feature: test
     Then I should see "hello world"
     When I go to "/node/3"
     Then I should see "ROCKS"
+
