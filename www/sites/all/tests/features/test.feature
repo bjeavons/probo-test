@@ -5,4 +5,4 @@ Feature: test
     Given I go to "/node/1"
     Then I should see "hello world"
     When I go to "/node/2/"
-    Then I should "ROCKS"
+    Then I should see "ROCKS"
