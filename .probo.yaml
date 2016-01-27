@@ -10,6 +10,9 @@ steps:
   - name: pwd
     plugin: Shell
     command: 'pwd'
+  - name: Build behat deps
+    plugin: Shell
+    command: 'cd $SRC_DIR/sites/all/tests ; composer install'
   - name: Run behat tests
     plugin: Shell
-    command: 'cd $SRC_DIR/www/sites/all/tests ; ./bin/behat '
+    command: '$SRC_DIR/www/sites/all/tests/bin/behat --config sites/all/tests/behat.probo.yml --tags=probo'
