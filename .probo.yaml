@@ -3,7 +3,7 @@ assets:
 steps:
   - name: Test
     plugin: Shell
-    command: ls -la ~
+    command: ls -la ~/.drush
   - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
