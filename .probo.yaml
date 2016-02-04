@@ -1,15 +1,15 @@
 assets:
   - d7.sql.gz
 steps:
-  - name: Test
-    plugin: Shell
-    command: ls -la ~/.drush
   - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
     databaseGzipped: true
     databaseUpdates: true
     subDirectory: www
+  - name: Test
+    plugin: Shell
+    command: "cd $SRC_DIR ; drush sa @self"
   - name: pwd
     plugin: Shell
     command: 'pwd'
