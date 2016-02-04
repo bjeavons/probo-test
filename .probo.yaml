@@ -3,11 +3,7 @@ assets:
 steps:
   - name: Test
     plugin: Shell
-    command: |
-      ls . ;
-      du -hf ;
-      cd $SRC_DIR ;
-      ls ;
+    command: ls -la ~
   - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
