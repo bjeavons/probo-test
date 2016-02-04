@@ -9,7 +9,11 @@ steps:
     subDirectory: www
   - name: Test
     plugin: Shell
-    command: "cd $SRC_DIR ; drush st ; drush sa @self >> ~/.drush/aliases.drushrc.php ; cd ~ ; cat ~/aliases.drushrc.php ; drush sa ; drush @self st"
+    command: |
+      echo '<?php ' >> ~/.drush/aliases.drushrc.php ;
+      echo '$aliases["self"] = ["root" => "/var/www/html/www", "uri" => "http://default"];' >> ~/.drush/aliases.drushrc.php ;
+      cd ~ ;
+      drush @self st ;
   - name: pwd
     plugin: Shell
     command: 'pwd'
