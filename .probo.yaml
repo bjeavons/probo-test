@@ -13,7 +13,7 @@ steps:
       echo '<?php ' >> ~/.drush/aliases.drushrc.php ;
       echo '$aliases["self"] = ["root" => "/var/www/html/www", "uri" => "http://default"];' >> ~/.drush/aliases.drushrc.php ;
       cd ~ ;
-      drush @self st ;
+      drush @self cc all ;
   - name: pwd
     plugin: Shell
     command: 'pwd'
