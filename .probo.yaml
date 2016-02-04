@@ -9,7 +9,7 @@ steps:
     subDirectory: www
   - name: Test
     plugin: Shell
-    command: "cd $SRC_DIR ; drush sa @self"
+    command: "cd $SRC_DIR ; drush sa @self >> ~/.drush/aliases.drushrc.php ; cd ~ ; drush @self st"
   - name: pwd
     plugin: Shell
     command: 'pwd'
