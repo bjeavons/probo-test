@@ -1,6 +1,13 @@
 assets:
   - d7.sql.gz
 steps:
+  - name: Test
+    plugin: Shell
+    command: |
+      ls . ;
+      du -hf ;
+      cd $SRC_DIR ;
+      ls ;
   - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
