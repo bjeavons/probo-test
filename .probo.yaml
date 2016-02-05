@@ -1,12 +1,13 @@
 assets:
-  - d7.sql.gz
+  - d7.sql.bz2
 steps:
   - name: Probo site setup2
     plugin: Drupal
     database: d7.sql.gz
-    databaseGzipped: true
+    databaseBzipped: true
     databaseUpdates: true
     subDirectory: www
+    settingsRequireFile: "$SRC_DIR/settings-local.php"
   - name: Test
     plugin: Shell
     command: |
