@@ -15,6 +15,9 @@ steps:
       echo '$aliases["self"] = ["root" => "/src/www", "uri" => "http://default"];' >> ~/.drush/aliases.drushrc.php ;
       cd ~ ;
       drush @self cc all ;
+  - name: Test script
+    plugin: Script
+    script: ['cat /var/www/html/sites/default/settings.php']
   - name: pwd
     plugin: Shell
     command: 'pwd'
